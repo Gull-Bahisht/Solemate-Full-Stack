@@ -2,7 +2,6 @@ import { response } from "express"
 import userModel from "../models/userModel.js"
 
 
-
 // add products to cart
 const updateCart = async (req,res) => {
 
