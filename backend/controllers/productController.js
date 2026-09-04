@@ -10,9 +10,6 @@ const addProduct = async (req,res) => {
         const {name,description,price,category,sizes,bestseller} = req.body;
 
         const image1 = req.files.image1 && req.files.image1[0];
-        // const image2 = req.files.image2 && req.files.image2[0];
-        // const image3 = req.files.image3 && req.files.image3[0];
-        // const image4 = req.files.image4 && req.files.image4[0];
 
         const images = [image1]
         .filter((item)=>item !== undefined);
@@ -104,7 +101,7 @@ const singleProduct = async (req,res) => {
 
         const {productId} = req.body
         const product = await productModel.findById(productId);
-        res.json({success:false,product})
+        res.json({success:true,product})
 
          
         
